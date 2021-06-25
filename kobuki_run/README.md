@@ -1,4 +1,4 @@
-# kobuki_test
+# kobuki_run
 
 
 kobuki를 터틀봇과 같이 launch파일 하나로 mapping 과 navigation 되도록 만듦
