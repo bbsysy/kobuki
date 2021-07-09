@@ -24,7 +24,7 @@ Clone this project to your catkin's workspace scr folder
 ## How to run Kobuki
 
 ```
- roscore
+  roscore
 $ roslaunch kobuki_node minimal.launch
 $ roslaunch ydlidar_ros lidar.launch
 $ roslaunch kobuki_keyop keyop.launch
@@ -38,7 +38,12 @@ gmapping.launch files that run kobuki_node, ydlidar, gmapping and rviz all at on
 
 ```
 $ roslaunch kobuki_run gmapping.launch
+
+At another terminal
+$ roslaunch kobuki_keyop keyop.launch
 ```
+
+
 
 if you want to use rosbag
 
@@ -53,11 +58,32 @@ $ rosbag play <your bagfile>
 $ roslaunch kobuki_run gmapping.launch
 ```
 
+first, save the data using rosbag and then gmapping
+
+```
+  roscore
+$ roslaunch kobuki_node minimal.launch
+$ roslaunch ydlidar_ros lidar.launch
+$ roslaunch kobuki_keyop keyop.launch
+
+saving data
+$ cd ~/bagfiles
+$ rosbag record -a
+```
+
+You can disconnect from the kobuki.
+
+```
+$ rosrun gmapping slam_gmapping _base_frame:="base_footprint"
+```
+
 if you want to save the map (with rviz on)
 
 ```
 $ rosrun map_server map_server -f ~/map_server
 ```
+
+
 
 #### navigation
 
