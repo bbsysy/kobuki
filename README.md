@@ -80,7 +80,7 @@ $ rosrun gmapping slam_gmapping _base_frame:="base_footprint"
 if you want to save the map (with rviz on)
 
 ```
-$ rosrun map_server map_server -f ~/map_server
+$ rosrun map_server map_saver -f ~/map
 ```
 
 
