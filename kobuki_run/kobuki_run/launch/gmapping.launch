@@ -18,7 +18,7 @@
    <!-- rviz -->
   <group if="$(arg open_rviz)"> 
     <node pkg="rviz" type="rviz" name="rviz" required="true"
-          args="-d $(find kobuki_test)/launch/kobuki_gmapping.rviz"/>
+          args="-d $(find kobuki_run)/launch/kobuki_gmapping.rviz"/>
   </group>
   
 </launch>
